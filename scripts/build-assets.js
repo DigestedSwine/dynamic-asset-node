@@ -1,4 +1,5 @@
 import fs from "fs/promises";
+import crypto from "crypto";
 
 const URL =
   "https://api.scryfall.com/cards/search?q=legal%3Acommander+is%3Acommander&unique=cards&order=name";
@@ -20,6 +21,23 @@ async function readCurrentVersion() {
 
   const raw = await fs.readFile(VERSION_FILE, "utf8");
   return JSON.parse(raw).version ?? 0;
+}
+
+async function readPreviousHash() {
+  if (!(await exists(VERSION_FILE))) return null;
+
+  const raw = await fs.readFile(VERSION_FILE, "utf8");
+  return JSON.parse(raw).hash ?? null;
+}
+
+function hashUniqueCards(data) {
+  const normalized = data
+    .map(card => card.o)
+    .filter(Boolean)
+    .sort()
+    .join("\n");
+
+  return crypto.createHash("sha256").update(normalized).digest("hex");
 }
 
 async function pull() {
@@ -60,30 +78,25 @@ async function pull() {
   return out;
 }
 
-async function readExistingData() {
-  if (!(await exists(OUT_FILE))) return null;
-
-  const raw = await fs.readFile(OUT_FILE, "utf8");
-  const parsed = JSON.parse(raw);
-
-  return parsed.d ?? null;
-}
-
 const data = await pull();
 
 await fs.mkdir("assets", { recursive: true });
 
-const currentData = await readExistingData();
 const currentVersion = await readCurrentVersion();
+const previousHash = await readPreviousHash();
+const currentHash = hashUniqueCards(data);
 
-const hasChanged = JSON.stringify(currentData) !== JSON.stringify(data);
+const hasChanged = previousHash !== currentHash;
 const nextVersion = hasChanged ? currentVersion + 1 : currentVersion;
+
+const updatedAt = new Date().toISOString();
 
 const payload = {
   version: nextVersion,
-  updated_at: new Date().toISOString(),
+  updated_at: updatedAt,
   ts: Date.now(),
   c: data.length,
+  h: currentHash,
   d: data
 };
 
@@ -93,14 +106,16 @@ await fs.writeFile(
   VERSION_FILE,
   JSON.stringify({
     version: nextVersion,
-    updated_at: payload.updated_at,
+    updated_at: updatedAt,
     count: data.length,
-    changed: hasChanged
+    changed: hasChanged,
+    hash_type: "unique_oracle_ids",
+    hash: currentHash
   })
 );
 
 console.log(
   hasChanged
     ? `updated to version ${nextVersion}`
-    : `no change; version remains ${nextVersion}`
+    : `no unique card changes; version remains ${nextVersion}`
 );
