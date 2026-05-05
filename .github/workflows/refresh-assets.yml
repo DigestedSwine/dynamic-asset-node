@@ -12,16 +12,23 @@ jobs:
   refresh:
     runs-on: ubuntu-latest
 
+    env:
+      FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
+
     steps:
-      - uses: actions/checkout@v4
+      - name: Checkout repo
+        uses: actions/checkout@v4
 
-      - uses: actions/setup-node@v4
+      - name: Setup Node
+        uses: actions/setup-node@v4
         with:
-          node-version: 22
+          node-version: 24
 
-      - run: npm run build
+      - name: Build assets
+        run: npm run build
 
-      - uses: stefanzweifel/git-auto-commit-action@v5
+      - name: Commit updated assets
+        uses: stefanzweifel/git-auto-commit-action@v5
         with:
           commit_message: "refresh assets"
           file_pattern: assets/core_v1.json assets/version.json
