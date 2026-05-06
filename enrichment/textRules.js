@@ -64,6 +64,39 @@ const RULES = {
   ]
 };
 
+const ARCHETYPES = [
+  {
+    name: "aristocrats",
+    requires: ["sacrifice_engine", "life_drain"],
+    bonus: ["death_trigger"]
+  },
+  {
+    name: "go_wide_tokens",
+    requires: ["token_engine"],
+    bonus: ["attack_trigger"]
+  },
+  {
+    name: "spellslinger",
+    requires: ["cast_trigger", "copy_engine"],
+    bonus: ["card_draw_engine"]
+  },
+  {
+    name: "lands_matter",
+    requires: ["ramp_engine"],
+    bonus: ["landfall_trigger"]
+  },
+  {
+    name: "graveyard_value",
+    requires: ["recursion_engine"],
+    bonus: ["death_trigger"]
+  },
+  {
+    name: "control_lock",
+    requires: ["counter_magic", "combat_lock"],
+    bonus: ["card_draw_engine"]
+  }
+];
+
 function scanCategory(text, patterns) {
   const hits = [];
   for (const p of patterns) {
@@ -72,16 +105,52 @@ function scanCategory(text, patterns) {
   return hits;
 }
 
+function detectArchetype(signals) {
+  const active = [];
+
+  for (const a of ARCHETYPES) {
+    const hasCore = a.requires.every(r => signals.includes(r));
+    const hasBonus = a.bonus.some(b => signals.includes(b));
+
+    if (hasCore || (a.requires.some(r => signals.includes(r)) && hasBonus)) {
+      active.push(a.name);
+    }
+  }
+
+  return active;
+}
+
 function analyzeCommanderText(txt = "") {
   const text = normalizeText(txt);
 
+  const triggers = scanCategory(text, RULES.triggers);
+  const win_conditions = scanCategory(text, RULES.wincons);
+  const engines = scanCategory(text, RULES.engines);
+  const scaling = scanCategory(text, RULES.scaling);
+  const interaction = scanCategory(text, RULES.interaction);
+  const conversion = scanCategory(text, RULES.conversion);
+
+  const allSignals = [
+    ...triggers,
+    ...win_conditions,
+    ...engines,
+    ...scaling,
+    ...interaction,
+    ...conversion
+  ];
+
+  const archetype = detectArchetype(allSignals);
+
   return {
-    triggers: scanCategory(text, RULES.triggers),
-    win_conditions: scanCategory(text, RULES.wincons),
-    engines: scanCategory(text, RULES.engines),
-    scaling: scanCategory(text, RULES.scaling),
-    interaction: scanCategory(text, RULES.interaction),
-    conversion: scanCategory(text, RULES.conversion)
+    triggers,
+    win_conditions,
+    engines,
+    scaling,
+    interaction,
+    conversion,
+
+    // 🔥 NEW OUTPUT LAYER
+    archetype
   };
 }
 
