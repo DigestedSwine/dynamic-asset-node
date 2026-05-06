@@ -8,6 +8,9 @@ const OUT_FILE = "assets/core_v1.json";
 const OUT_FILE_V2 = "assets/core_v2.json";
 const VERSION_FILE = "assets/version.json";
 
+// 🔥 ENRICHMENT VERSION (increment when tag logic changes)
+const ENRICHMENT_VERSION = 1;
+
 async function exists(path) {
   try {
     await fs.access(path);
@@ -146,12 +149,12 @@ async function pull() {
 }
 
 /* =========================
-   MAIN EXECUTION
+   MAIN
 ========================= */
 
 const data = await pull();
 
-// enriched layer
+// enrichment layer
 const enriched = data.map(card => {
   const tags = getTags(card);
   const playstyle = getPlaystyles(tags);
@@ -177,7 +180,7 @@ const nextVersion = hasChanged ? currentVersion + 1 : currentVersion;
 const updatedAt = new Date().toISOString();
 
 /* =========================
-   WRITE FILES
+   OUTPUT
 ========================= */
 
 const payload = {
@@ -194,6 +197,7 @@ await fs.writeFile(OUT_FILE, JSON.stringify(payload));
 await fs.writeFile(
   OUT_FILE_V2,
   JSON.stringify({
+    enrichment_version: ENRICHMENT_VERSION,
     ...payload,
     d: enriched
   })
@@ -203,6 +207,7 @@ await fs.writeFile(
   VERSION_FILE,
   JSON.stringify({
     version: nextVersion,
+    enrichment_version: ENRICHMENT_VERSION,
     updated_at: updatedAt,
     count: data.length,
     changed: hasChanged,
