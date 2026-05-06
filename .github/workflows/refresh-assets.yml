@@ -31,4 +31,4 @@ jobs:
         uses: stefanzweifel/git-auto-commit-action@v5
         with:
           commit_message: "refresh assets"
-          file_pattern: assets/core_v1.json assets/version.json
+          file_pattern: assets/core_v1.json assets/core_v2.json assets/version.json
