@@ -1,0 +1,36 @@
+name: Build GUI Assets
+
+on:
+  push:
+    paths:
+      - 'scripts/build-gui-assets.py'
+      - 'assets/GUI/settings_40x40.bmp'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Install Pillow
+        run: pip install pillow
+
+      - name: Generate GUI assets
+        run: python scripts/build-gui-assets.py
+
+      - name: Commit generated assets
+        uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          commit_message: "build: regenerate GUI assets"
+          file_pattern: "assets/GUI/icons/*.bmp assets/gui_manifest.json"
