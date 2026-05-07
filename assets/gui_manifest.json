@@ -1,0 +1,50 @@
+{
+  "gui_version": 1,
+  "assets": [
+    {
+      "name": "settings",
+      "url": "https://digestedswine.github.io/dynamic-asset-node/assets/GUI/settings_40x40.bmp",
+      "sd_path": "/gui/settings.bmp",
+      "w": 40,
+      "h": 40,
+      "sha256": "ab0ca156834c78696ac0f5fc041d271405e61651e0569f45624c7fa61ae9257c",
+      "size": 4854
+    },
+    {
+      "name": "skull",
+      "url": "https://digestedswine.github.io/dynamic-asset-node/assets/GUI/icons/skull_20.bmp",
+      "sd_path": "/gui/skull.bmp",
+      "w": 20,
+      "h": 20,
+      "sha256": "49d9196e0f068b1e8c7a25dfd4438bae766d446b26ba1fb11b5ad45b37dd08d6",
+      "size": 1254
+    },
+    {
+      "name": "crown",
+      "url": "https://digestedswine.github.io/dynamic-asset-node/assets/GUI/icons/crown_20.bmp",
+      "sd_path": "/gui/crown.bmp",
+      "w": 20,
+      "h": 20,
+      "sha256": "4cea1b5a24b1df10964cb95ec208f1e33886abda723d5583a1cb4d1986e2e0f5",
+      "size": 1254
+    },
+    {
+      "name": "sword",
+      "url": "https://digestedswine.github.io/dynamic-asset-node/assets/GUI/icons/sword_20.bmp",
+      "sd_path": "/gui/sword.bmp",
+      "w": 20,
+      "h": 20,
+      "sha256": "2e641420989c8dfd901e746681e0f915c1396ffabde7014e9b6f2b2e528e4c3f",
+      "size": 1254
+    },
+    {
+      "name": "diamond",
+      "url": "https://digestedswine.github.io/dynamic-asset-node/assets/GUI/icons/diamond_20.bmp",
+      "sd_path": "/gui/diamond.bmp",
+      "w": 20,
+      "h": 20,
+      "sha256": "52603125f85159d4d25504cd79779db5568d1a269b74db6448eef4243583d3a6",
+      "size": 1254
+    }
+  ]
+}
