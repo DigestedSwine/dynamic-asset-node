@@ -1,7 +1,7 @@
 {
-  "version": "0.2",
-  "build": 2,
-  "url": "https://digestedswine.github.io/dynamic-asset-node/firmware/chronicle-0.2.bin",
-  "size": 0,
-  "notes": "Initial OTA manifest. Increment build to trigger update on devices."
+  "version": "0.3",
+  "build": 3,
+  "url": "https://digestedswine.github.io/dynamic-asset-node/firmware/chronicle-0.3.bin",
+  "size": 1253088,
+  "notes": "Gold star field on splash screen."
 }
