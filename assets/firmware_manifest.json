@@ -1,7 +1,7 @@
 {
-  "version": "0.3",
-  "build": 3,
-  "url": "https://digestedswine.github.io/dynamic-asset-node/firmware/chronicle-0.3.bin",
-  "size": 1253088,
-  "notes": "Gold star field on splash screen."
+  "version": "0.4",
+  "build": 4,
+  "url": "https://digestedswine.github.io/dynamic-asset-node/firmware/chronicle-0.4.bin",
+  "size": 1253680,
+  "notes": "Big off-centre star on splash screen."
 }
