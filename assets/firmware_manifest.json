@@ -1,7 +1,7 @@
 {
-  "version": "0.4.20",
-  "build": 420,
-  "url": "https://digestedswine.github.io/dynamic-asset-node/firmware/chronicle-0.4.20.bin",
-  "size": 1260832,
-  "notes": "Firmware update check from device settings, tap firmware row to check."
+  "version": "0.4.22",
+  "build": 422,
+  "url": "https://digestedswine.github.io/dynamic-asset-node/firmware/chronicle-0.4.22.bin",
+  "size": 1260304,
+  "notes": "Advanced Settings in game menu replaces brightness, context-aware back button."
 }
