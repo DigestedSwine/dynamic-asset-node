@@ -1,7 +1,7 @@
 {
-  "version": "0.4.23",
-  "build": 423,
-  "url": "https://digestedswine.github.io/dynamic-asset-node/firmware/chronicle-0.4.23.bin",
-  "size": 1264640,
-  "notes": "Device ID in settings, unlock system infrastructure, theme colour browser."
+  "version": "0.4.24",
+  "build": 424,
+  "url": "https://digestedswine.github.io/dynamic-asset-node/firmware/chronicle-0.4.24.bin",
+  "size": 1264656,
+  "notes": "OTA error screen fix — error message now stays visible until dismissed."
 }
