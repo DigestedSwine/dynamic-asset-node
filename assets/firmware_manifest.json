@@ -1,7 +1,7 @@
 {
-  "version": "0.4.24",
-  "build": 424,
-  "url": "https://digestedswine.github.io/dynamic-asset-node/firmware/chronicle-0.4.24.bin",
-  "size": 1264656,
-  "notes": "OTA error screen fix — error message now stays visible until dismissed."
+  "version": "0.4.25",
+  "build": 425,
+  "url": "https://digestedswine.github.io/dynamic-asset-node/firmware/chronicle-0.4.25.bin",
+  "size": 1266304,
+  "notes": "Theme browser levelled up — per-theme tile strips, corner marks, styled buttons, splash backgrounds, tap delay."
 }
