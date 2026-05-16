@@ -1,7 +1,7 @@
 {
-  "version": "0.4.16",
-  "build": 416,
-  "url": "https://digestedswine.github.io/dynamic-asset-node/firmware/chronicle-0.4.16.bin",
-  "size": 1255664,
-  "notes": "Tap feedback 200ms, OTA banner at top, wifi password box fix."
+  "version": "0.4.17",
+  "build": 417,
+  "url": "https://digestedswine.github.io/dynamic-asset-node/firmware/chronicle-0.4.17.bin",
+  "size": 1261008,
+  "notes": "Splash settings screen: WiFi, Brightness, Commander Data, Firmware, Forget WiFi, Clear Save."
 }
