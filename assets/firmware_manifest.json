@@ -1,7 +1,7 @@
 {
-  "version": "0.4.17",
-  "build": 417,
-  "url": "https://digestedswine.github.io/dynamic-asset-node/firmware/chronicle-0.4.17.bin",
-  "size": 1261008,
-  "notes": "Splash settings screen: WiFi, Brightness, Commander Data, Firmware, Forget WiFi, Clear Save."
+  "version": "0.4.19",
+  "build": 419,
+  "url": "https://digestedswine.github.io/dynamic-asset-node/firmware/chronicle-0.4.19.bin",
+  "size": 1260560,
+  "notes": "Gear button on splash, pulsing TAP TO BEGIN button, Pokemon prize win condition."
 }
