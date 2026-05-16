@@ -1,7 +1,7 @@
 {
-  "version": "0.4.26",
-  "build": 426,
-  "url": "https://digestedswine.github.io/dynamic-asset-node/firmware/chronicle-0.4.26.bin",
-  "size": 1267280,
-  "notes": "Theme browser depth pass — gradients, beveled borders, button shadows, double-border glow."
+  "version": "0.4.27",
+  "build": 427,
+  "url": "https://digestedswine.github.io/dynamic-asset-node/firmware/chronicle-0.4.27.bin",
+  "size": 1268880,
+  "notes": "Theme browser — NOIR and STEAMPUNK themes added (7 total)."
 }
