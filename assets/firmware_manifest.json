@@ -1,7 +1,7 @@
 {
-  "version": "0.4.25",
-  "build": 425,
-  "url": "https://digestedswine.github.io/dynamic-asset-node/firmware/chronicle-0.4.25.bin",
-  "size": 1266304,
-  "notes": "Theme browser levelled up — per-theme tile strips, corner marks, styled buttons, splash backgrounds, tap delay."
+  "version": "0.4.26",
+  "build": 426,
+  "url": "https://digestedswine.github.io/dynamic-asset-node/firmware/chronicle-0.4.26.bin",
+  "size": 1267280,
+  "notes": "Theme browser depth pass — gradients, beveled borders, button shadows, double-border glow."
 }
