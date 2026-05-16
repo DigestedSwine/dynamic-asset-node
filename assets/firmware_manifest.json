@@ -1,7 +1,7 @@
 {
-  "version": "0.4.22",
-  "build": 422,
-  "url": "https://digestedswine.github.io/dynamic-asset-node/firmware/chronicle-0.4.22.bin",
+  "version": "0.4.23",
+  "build": 423,
+  "url": "https://digestedswine.github.io/dynamic-asset-node/firmware/chronicle-0.4.23.bin",
   "size": 1260304,
-  "notes": "Advanced Settings in game menu replaces brightness, context-aware back button."
+  "notes": "Device ID in settings, unlock system infrastructure, theme colour browser."
 }
