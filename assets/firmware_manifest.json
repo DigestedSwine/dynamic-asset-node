@@ -1,7 +1,7 @@
 {
-  "version": "0.4.19",
-  "build": 419,
-  "url": "https://digestedswine.github.io/dynamic-asset-node/firmware/chronicle-0.4.19.bin",
-  "size": 1260560,
-  "notes": "Gear button on splash, pulsing TAP TO BEGIN button, Pokemon prize win condition."
+  "version": "0.4.20",
+  "build": 420,
+  "url": "https://digestedswine.github.io/dynamic-asset-node/firmware/chronicle-0.4.20.bin",
+  "size": 1260832,
+  "notes": "Firmware update check from device settings, tap firmware row to check."
 }
