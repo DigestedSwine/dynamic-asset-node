@@ -1,7 +1,7 @@
 {
-  "version": "0.4.14",
-  "build": 414,
-  "url": "https://digestedswine.github.io/dynamic-asset-node/firmware/chronicle-0.4.14.bin",
+  "version": "0.4.15",
+  "build": 415,
+  "url": "https://digestedswine.github.io/dynamic-asset-node/firmware/chronicle-0.4.15.bin",
   "size": 1255664,
-  "notes": "Visual tap feedback on all buttons and keys."
+  "notes": "Tap feedback highlight duration increased to 300ms."
 }
