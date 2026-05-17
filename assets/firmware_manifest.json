@@ -1,7 +1,7 @@
 {
-  "version": "0.4.27",
-  "build": 427,
-  "url": "https://digestedswine.github.io/dynamic-asset-node/firmware/chronicle-0.4.27.bin",
-  "size": 1268880,
-  "notes": "Theme browser — NOIR and STEAMPUNK themes added (7 total)."
+  "version": "0.4.28",
+  "build": 428,
+  "url": "https://digestedswine.github.io/dynamic-asset-node/firmware/chronicle-0.4.28.bin",
+  "size": 1268832,
+  "notes": "Version bump — unlock/device ID groundwork."
 }
