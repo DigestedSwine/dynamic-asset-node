@@ -1,7 +1,7 @@
 {
   "version": "0.4.28",
-  "build": 428,
-  "url": "https://digestedswine.github.io/dynamic-asset-node/firmware/chronicle-0.4.28.bin",
+  "build": 429,
+  "url": "https://digestedswine.github.io/dynamic-asset-node/firmware/chronicle-0.4.28-b429.bin",
   "size": 1262592,
   "notes": "ChronQuest API check-in, SN in settings, device settings panel, corrected unlock model"
 }
