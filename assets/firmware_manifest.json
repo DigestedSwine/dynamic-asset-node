@@ -1,7 +1,7 @@
 {
-  "version": "0.4.32",
-  "build": 432,
-  "url": "https://digestedswine.github.io/dynamic-asset-node/firmware/chronicle-0.4.32.bin",
-  "size": 1265920,
-  "notes": "v0.4.32"
+  "version": "0.5.1",
+  "build": 510,
+  "url": "https://digestedswine.github.io/dynamic-asset-node/firmware/chronicle-0.5.1.bin",
+  "size": 1629136,
+  "notes": "v0.5.1"
 }
